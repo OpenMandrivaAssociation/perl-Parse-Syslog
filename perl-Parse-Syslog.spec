@@ -10,6 +10,7 @@ URL:		http://www.cpan.org/
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DS/DSCHWEI/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Unix syslogs are convenient to read for humans but because of small differences
