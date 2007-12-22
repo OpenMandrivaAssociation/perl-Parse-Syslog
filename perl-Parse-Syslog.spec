@@ -1,16 +1,15 @@
 %define	module Parse-Syslog
 
-Summary:	Parse::Syslog - Parse Unix syslog files
+Summary:	Parse Unix syslog files
 Name:		perl-%{module}
 Version:	1.09
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 Group:		Development/Perl
-URL:		http://www.cpan.org/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DS/DSCHWEI/%{module}-%{version}.tar.bz2
-Buildrequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{module}
+Source:		http://search.cpan.org/CPAN/modules/by-module/Parse/%{module}-%{version}.tar.bz2
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Unix syslogs are convenient to read for humans but because of small differences
@@ -27,12 +26,10 @@ Unix-timestamp, host, program, pid and text returned in a hash-reference.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean
@@ -40,7 +37,5 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{perl_vendorlib}/Parse/Syslog.pm
+%{perl_vendorlib}/Parse
 %{_mandir}/*/*
-
-
