@@ -3,7 +3,7 @@
 Summary:	Parse Unix syslog files
 Name:		perl-%{module}
 Version:	1.10
-Release:	%mkrel 1
+Release:	%mkrel 3
 License:	GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
