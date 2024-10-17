@@ -8,7 +8,7 @@ Release:	4
 Summary:	Parse Unix syslog files
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
