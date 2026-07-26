@@ -1,15 +1,13 @@
 %define	upstream_name    Parse-Syslog
-%define	upstream_version 1.10
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	1.10
+Release:	5
 
 Summary:	Parse Unix syslog files
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/modules/by-module/Parse/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ parser on a file (with new) and call next to get one line at a time with
 Unix-timestamp, host, program, pid and text returned in a hash-reference.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,9 +39,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.0
 + Revision: 404287
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.10-4mdv2009.0
+- rebuild using %1.10 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.10-4mdv2009.0
 + Revision: 258193
 - rebuild
 
