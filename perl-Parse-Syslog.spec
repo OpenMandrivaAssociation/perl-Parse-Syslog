@@ -1,13 +1,14 @@
 %define	upstream_name    Parse-Syslog
+%define upstream_version 1.11
 Name:		perl-%{upstream_name}
-Version:	1.10
-Release:	5
+Version:	1.11
+Release:	1
 
 Summary:	Parse Unix syslog files
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/Parse/%{upstream_name}-%{version}.tar.bz2
+Source0:	https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Parse-Syslog-1.11.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -35,41 +36,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %files
 %{perl_vendorlib}/Parse
 %{_mandir}/*/*
-
-%changelog
-* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.0
-+ Revision: 404287
-- rebuild using %1.10 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.10-4mdv2009.0
-+ Revision: 258193
-- rebuild
-
-* Thu Jul 24 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.10-3mdv2009.0
-+ Revision: 246273
-- rebuild
-
-* Mon Jan 21 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.10-1mdv2008.1
-+ Revision: 155670
-- update to new version 1.10
-
-* Sat Dec 22 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.09-3mdv2008.1
-+ Revision: 137160
-- spec cleanup
-
-* Sat Dec 22 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.09-2mdv2008.1
-+ Revision: 137070
-- rebuild
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-  + Thierry Vignaud <tvignaud@mandriva.com>
-    - kill re-definition of %%buildroot on Pixel's request
-
-
-* Sun Dec 17 2006 Oden Eriksson <oeriksson@mandriva.com> 1.09-1mdv2007.0
-+ Revision: 98326
-- Import perl-Parse-Syslog
-
-* Sun Dec 17 2006 Oden Eriksson <oeriksson@mandriva.com> 1.09-1mdv2007.1
-- initial Mandriva package (fixes #26912)
 
